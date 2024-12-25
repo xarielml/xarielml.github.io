@@ -49,8 +49,8 @@ markup:
 params:
   author: Hi, I'm Ariel
   authorimage: ../assets/images/global/author.webp
-  og_image: ../images/profpic.png
-  moto: "PhD candidate"
+  og_image: images/profpic.png
+  moto: "PhD Candidate and NSF Fellow at the University at Buffalo"
   description: "I build mechanistic and data-driven models to understand disease and explore treatments."
   disable_theme_toggle: false
   disable_stay_uptodate: true
@@ -117,10 +117,10 @@ menu:
       name: About
       url: /about/
       weight: 20
-    - identifier: prose
-      name: Prose
-      url: /prose/
-      weight: 10
+    # - identifier: prose
+    #   name: Prose
+    #   url: /prose/
+    #   weight: 10
     # - identifier: categories
     #   pre: dropdown
     #   name: Categories
