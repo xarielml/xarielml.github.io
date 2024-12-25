@@ -49,7 +49,7 @@ markup:
 params:
   author: Hi, I'm Ariel
   authorimage: ../assets/images/global/author.webp
-  og_image: /images/profpic.png
+  og_image: ../images/profpic.png
   moto: "PhD candidate"
   description: "I build mechanistic and data-driven models to understand disease and explore treatments."
   disable_theme_toggle: false

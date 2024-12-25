@@ -5,7 +5,7 @@
             <div class="grid items-center gap-8 mb-8 sm:mb-0 lg:gap-12 lg:grid-cols-12">
                 <div class="col-span-6 px-4 text-center sm:mb-6 lg:text-left lg:mb-0">
                     <h1 class="mb-2 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl xl:text-6xl dark:text-white">
-                        {{ .Site.Title }}
+                        {{ .Site.Author }}
                     </h1>
                     <h2 class="pb-2 text-3xl font-light text-gray-800 dark:text-gray-300 md:text-4xl">
                         {{ .Site.Params.Moto }}
@@ -15,14 +15,22 @@
                     </p>
                 </div>
                 <div class="col-span-6">
-                    {{ $hero := resources.GetMatch "images/pages/tailbliss-rocket-indigo.png" }}
+                        <span class="sr-only">{{ .Params.author }}</span>
+                        {{ with .Params.authorimage }}
+                        {{ with resources.Get . }}
+                        {{ $og_image := (.Resize "800x webp").RelPermalink }}
+                        <img class="w-10 h-10 rounded-full" src="{{ $og_image }}" alt="">
+                        {{ end }}
+                        {{ end }}
+                    </div>
+                    <!-- {{ $hero := resources.GetMatch "images/pages/tailbliss-rocket-indigo.png" }}
 
                     {{ $thumb := ($hero.Fill "400x400 webp q90") }}
                     {{ $large := ($hero.Fill "576x576 webp q90") }}
 
                     <img srcset="
                         {{- with $thumb.RelPermalink -}}{{.}} 400w{{- end -}}
-                        {{- with $large.RelPermalink -}}, {{.}} 576w{{- end -}}" src="{{ $hero.RelPermalink }}" width="100%" height="" alt="TailBliss Hero" class="w-full max-w-xl mx-auto rounded-lg" />
+                        {{- with $large.RelPermalink -}}, {{.}} 576w{{- end -}}" src="{{ $hero.RelPermalink }}" width="100%" height="" alt="TailBliss Hero" class="w-full max-w-xl mx-auto rounded-lg" /> -->
                 </div>
             </div>
         </div>
