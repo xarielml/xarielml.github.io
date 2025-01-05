@@ -1,5 +1,6 @@
 {{ define "main" }}
 <main>
+    <!-- First section on front page -->
     <div class="bg-gray-200 dark:bg-gray-900">
         <div class="max-w-screen-xl px-4 py-8 mx-auto">
             <div class="grid items-center gap-8 mb-8 sm:mb-0 lg:gap-12 lg:grid-cols-12">
@@ -15,7 +16,7 @@
                     </p>
                 </div>
                 <div class="col-span-6 md:col-span-5">
-                    {{ $hero := resources.GetMatch "images/pages/profpic.png" }}
+                    {{ $hero := resources.GetMatch .Site.Params.ProfPic }}
 
                     {{ $thumb := ($hero.Fill "400x400 webp q90") }}
                     {{ $large := ($hero.Fill "576x576 webp q90") }}
@@ -27,8 +28,6 @@
             </div>
         </div>
     </div>
-
-    <!-- More main page content here... -->
 
     <!-- Our mission section -->
     <div class="relative my-4">
@@ -117,7 +116,6 @@
             </div>
         </div>
     </div>
-
 
     <!-- Sponsors section -->
     <div class="max-w-md px-4 mx-auto md:pt-24 md:pb-16 sm:max-w-3xl sm:px-6 lg:max-w-7xl lg:px-8">

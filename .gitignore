@@ -4,6 +4,7 @@ public/
 .hugo_build.lock
 .vercel
 yarn-error.log
+hugo.yaml.exampleSite
 # Local Netlify folder
 .netlify
 yarn-error.log
