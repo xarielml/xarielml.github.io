@@ -1,0 +1,18 @@
+<div class="flex rounded-t-lg bg-top-color sm:px-2 w-full">
+    <div class="h-40 w-40 overflow-hidden sm:rounded-full sm:relative sm:p-0 top-10 left-5 p-3">
+        {{ with .Site.Params.profpic }}
+        {{ with resources.Get . }}
+        {{ $profpic := (.Resize "400x webp").RelPermalink }}
+        <img src="{{ $profpic }}">
+        {{ end }}
+        {{ end }}
+    </div>
+    <div class="w-2/3 sm:text-center mt-10 text-start">
+        <p class="text-4xl font-extrabold leading-none tracking-tight md:text-5xl xl:text-6xl">
+            {{ .Params.name }}
+        </p>
+        <p class="mt-2 text-2xl font-light md:text-3xl">
+            {{ .Params.role}} 
+        </p>
+    </div>
+</div>
