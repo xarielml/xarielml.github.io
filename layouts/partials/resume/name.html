@@ -1,5 +1,5 @@
-<div class="flex rounded-t-lg bg-top-color sm:px-2 w-full">
-    <div class="h-40 w-40 overflow-hidden sm:rounded-full sm:relative sm:p-0 top-10 left-5 p-3">
+<div class="grid grid-cols-3 gap-4 sm:gap-10 bg-top-color w-full">
+    <div class="place-self-end h-40 w-40 overflow-hidden sm:rounded-full sm:relative top-10">
         {{ with .Site.Params.profpic }}
         {{ with resources.Get . }}
         {{ $profpic := (.Resize "400x webp").RelPermalink }}
@@ -7,7 +7,7 @@
         {{ end }}
         {{ end }}
     </div>
-    <div class="w-2/3 sm:text-center mt-10 text-start">
+    <div class="col-span-2 mt-6 sm:mt-10 sm:relative">
         <p class="text-4xl font-extrabold leading-none tracking-tight md:text-5xl xl:text-6xl">
             {{ .Params.name }}
         </p>

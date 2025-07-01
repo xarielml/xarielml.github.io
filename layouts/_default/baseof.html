@@ -2,13 +2,13 @@
 <html lang="{{ .Language.Lang }}">
 
 <head>
-    {{ partial "head.html" . }}
+    {{ partial "essentials/head.html" . }}
 </head>
 
 <body class="bg-zinc-100 dark:bg-gray-800">
-    {{ partial "nav.html" . }}
+    {{ partial "essentials/nav.html" . }}
     {{ block "main" . }}{{ end }}
-    {{ partial "footer" . }}
+    {{ partial "essentials/footer" . }}
 </body>
 
 </html>
